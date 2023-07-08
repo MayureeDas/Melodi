@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music App</title>
+   
+</head>
+<body>
+<header>
+    <div class="menu_side">
+        <h1>Playlist</h1>
+        <div class="playlist">
+            <h4 class="active"><span></span><i class="bi bi-file-earmark-music"></i> Playlist</h4>
+            <h4><span></span><i class="bi bi-file-earmark-music"></i> Last Listening</h4>
+            <h4><span></span><i class="bi bi-file-earmark-music"></i> Recommended</h4>
+        </div>
+        <div class="menu_song">
+            <li class="songItem">
+                <span>01</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <li class="songItem">
+                <span>02</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+            </li>
+            <li class="songItem">
+                <span>03</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+            </li>
+            <li class="songItem">
+                <span>04</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+            </li>
+            <li class="songItem">
+                <span>05</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+            </li>
+            <li class="songItem">
+                <span>06</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+            </li>
+            <li class="songItem">
+                <span>07</span>
+                <img src="covers/1.jpg" alt="Imagine Dragons">
+                <h5>
+                    Believer
+                    <div class="subtitle">Imagine Dragons</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+            </li>
+           
+        </div>
+    </div>
+    
+    <div class="song_side">
+        <nav>
+            <ul>
+                <li>Discover <span></span></li>
+                <li>My Library </li>
+            </ul>
+            <div class="search">
+                <i class="bi bi-search-heart"></i>
+                <input type="text" placeholder="Search Music">
+            </div>
+            <div class="user">
+                <img src="covers/Mayuree Das.jpg" alt="Imagine Dragons" title="Imagine Dragons" alt="User" title="Mayuree Das">
+            </div>
+        </nav>
+        <div class="content">
+            <h1>My Collection :</h1>
+            <p>
+                This Music Album is a Small Collection of My Taste in Music , I Hope You'll Like It.
+                <br>
+               "Where Words Fail , Music Speaks..."
+               <br>
+               "Music is the The Universal Language of Mankind"
+            </p>
+            <div class="buttons">
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+        </div>
+        <div class="master_play" style="padding: 40px; margin-top: 10px;">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="mp3File" id="mp3File" accept=".mp3" required>
+                <input type="submit" value="Upload" />
+            </form>
+            <div style="margin: 20px;">
+                <audio id="audioPlayer" controls autoplay>
+                <source id="audioSource" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <button class="buttons" onclick="playRandomMusic()">Play Random Music</button>
+            </div>
+        </div>
+        
+        <div class="favourite_song">
+            <div class="h4">
+                <h4>Favourite Songs</h4>
+                <div class="btn_s">
+                    <i title="left_scroll" class="bi bi-arrow-left-circle-fill" id="pop_song_left"></i>
+                    <i title="right_scroll" class="bi bi-arrow-right-circle-fill"  id="pop_song_right"></i>    
+                </div>
+            </div>
+            <div class="pop_song">
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="img_play">  
+                         <img src="covers/1.jpg" alt="Believer">
+                         <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                    </div>
+                    <h5>Believer
+                       <br>
+                       <div class="subtitle">Imagine Dragons</div>
+                    </h5>
+                </li>
+            </div>
+        </div>
+        <div class="favourite_artists">
+            <div class="h4">
+                <h4>Favourite Artists</h4>
+            </div>
+                <div class="container">
+                    <div class="rotator">
+                        <div class="item"><img src="artists/1.jpg" alt="Imagine Dragons" title="Imagine Dragons"></div>
+                        <div class="item"><img src="artists/2.jpg" alt="Ed Sheeran" title="Ed Sheeran"></div>
+                        <div class="item"><img src="artists/3.jpg" alt="Justin Bieber" title="justin Bieber"></div>
+                        <div class="item"><img src="artists/4.jpg" alt="Charlie Puth" title="Charlie Puth"></div>
+                        <div class="item"><img src="artists/5.jpg" alt="Celine Dion" title="Celine Dion"></div>
+                        <div class="item"><img src="artists/6.jpg" alt="Duncan Laurence" title="Duncan Laurence"></div>
+                        <div class="item"><img src="artists/7.jpg" alt="Alan Walker" title="Alan Walker"></div>
+                        <div class="item"><img src="artists/8.jpg" alt="Sia" title="Sia"></div>
+                        <div class="item"><img src="artists/9.jpg" alt="Arijit Singh" title="Arijit Singh"></div>
+                        <div class="item"><img src="artists/10.jpg" alt="Shreya Ghoshal" title="Shreya Ghoshal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+   
+   
+
+
+        </div>
+    </div>
+
+
+    <div class="master_play">
+        <div class="wave" id="wave">
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+        </div>
+        <img src="covers/1.jpg" alt="Imagine Dragons" id="poster_master_play">
+        <h5 id="title">
+            Believer
+            <div class="subtitle">Imagine Dragons</div>
+        </h5>
+        <div class="icon">
+            <i class="bi shuffle bi-music-note-beamed"></i>
+            <i class="bi bi-skip-start-fill" id="back"></i>
+            <i class="bi bi-play-fill" id="masterPlay"></i>
+            <i class="bi bi-skip-end-fill" id="next"></i>
+            <a href="songs/2.mp3" download="The Script" id="download_music"><i class="bi bi-cloud-arrow-down-fill" ></i></a>
+        </div>
+        <span id="currentStart">0:00</span>
+        <div class="bar">
+            <input type="range" id="seek" min="0" max="100">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+        </div>
+        <span id="currentEnd">0:30</span>
+        <div class="vol">
+            <i class="bi bi-volume-up-fill" id="vol_icon"></i>
+            <input type="range" min="0" max="100" id="vol">
+            <div class="vol_bar"></div>
+            <div class="dot" id="vol_dot"></div>
+        </div>
+      
+    </div>
+
+
+    <div class="book">
+    <input type="checkbox" id="c1">  
+    <input type="checkbox" id="c2">  
+    <input type="checkbox" id="c3"> 
+    <div id="cover"><img src="covers/1.jpg"></div>
+    <div class="flip-book">
+    <div class="flip" id="p1">
+    <div class="back">
+    <img src="covers/2.jpg"> 
+    <label class="back-btn" for="c1">Back</label>  
+    </div>
+    <div class="front">
+    <h2>Believer</h2>
+    <p>First things first
+        I'ma say all the words inside my head
+        I'm fired up and tired of the way that things have been, oh-ooh
+        The way that things have been, oh-ooh
+        Second thing second
+        Don't you tell me what you think that I could be
+        I'm the one at the sail, I'm the master of my sea, oh-ooh
+        The master of my sea, oh-ooh
+        I was broken from a young age
+        Taking my sulking to the masses
+        Writing my poems for the few
+        That look at me, took to me, shook to me, feeling me
+        Singing from heartache from the pain
+        Taking my message from the veins
+        Speaking my lesson from the brain
+        Seeing the beauty through the...
+        Pain!
+        You made me a, you made me a believer, believer
+        Pain!
+        You break me down and build me up, believer, believer
+        Pain!
+        Oh, let the bullets fly, oh, let them rain
+        My life, my love, my drive, it came from...
+        Pain!
+        You made me a, you made me a believer, believer</p> 
+        <label class="next-btn" for="c1">Next</label> 
+    </div>    
+    </div>  
+    <div class="flip" id="p2">
+        <div class="back">
+        <img src="covers/3.jpg"> 
+        <label class="back-btn" for="c2">Back</label>  
+        </div>
+        <div class="front">
+        <h2>Believer</h2>
+        <p>First things first
+            <br>
+            I'ma say all the words inside my head
+            <br>
+            I'm fired up and tired of the way that things have been, oh-ooh
+            <br>
+            The way that things have been, oh-ooh
+            <br>
+            Second thing second
+            <br>
+            Don't you tell me what you think that I could be
+            <br>
+            I'm the one at the sail, I'm the master of my sea, oh-ooh
+            <br>
+            The master of my sea, oh-ooh
+            <br>
+            I was broken from a young age
+            <br>
+            Taking my sulking to the masses
+            <br>
+            Writing my poems for the few
+            <br>
+            That look at me, took to me, shook to me, feeling me
+            <br>
+            Singing from heartache from the pain
+            <br>
+            Taking my message from the veins
+            <br>
+            Speaking my lesson from the brain
+            <br>
+            Seeing the beauty through the...
+            <br>
+            Pain!
+            <br>
+            You made me a, you made me a believer, believer
+            <br>
+            Pain!
+            <br>
+            You break me down and build me up, believer, believer
+            <br>
+            Pain!
+            <br>
+            Oh, let the bullets fly, oh, let them rain
+            <br>
+            My life, my love, my drive, it came from...
+            <br>
+            Pain!
+            <br>
+            You made me a, you made me a believer, believer</p> 
+            <label class="next-btn" for="c2">Next</label> 
+        </div>    
+        </div> 
+        <div class="flip" id="p3">
+            <div class="back">
+            <img src="covers/2.jpg"> 
+            <label class="back-btn" for="c3">Back</label>  
+            </div>
+            <div class="front">
+            <h2>Believer</h2>
+            <p>First things first
+                I'ma say all the words inside my head
+                I'm fired up and tired of the way that things have been, oh-ooh
+                The way that things have been, oh-ooh
+                Second thing second
+                Don't you tell me what you think that I could be
+                I'm the one at the sail, I'm the master of my sea, oh-ooh
+                The master of my sea, oh-ooh
+                I was broken from a young age
+                Taking my sulking to the masses
+                Writing my poems for the few
+                That look at me, took to me, shook to me, feeling me
+                Singing from heartache from the pain
+                Taking my message from the veins
+                Speaking my lesson from the brain
+                Seeing the beauty through the...
+                Pain!
+                You made me a, you made me a believer, believer
+                Pain!
+                You break me down and build me up, believer, believer
+                Pain!
+                Oh, let the bullets fly, oh, let them rain
+                My life, my love, my drive, it came from...
+                Pain!
+                You made me a, you made me a believer, believer</p> 
+                <label class="next-btn" for="c3">Next</label> 
+            </div>    
+            </div>
+    </div> 
+    </div>
+
+    <div class="wrapper">
+        <div class="cube-box">
+            <img src="music-pic/1.jpg">
+            <img src="music-pic/2.jpg">
+            <img src="music-pic/3.jpg">
+            <img src="music-pic/4.jpg">
+            <img src="music-pic/5.jpg">
+            <img src="music-pic/6.jpg">
+            
+        </div>
+    </div>
+    <div class="hero">
+
+        
+    
+    </div>
+</header>
+    <script src="app.js"></script>
+    
+    <script>
+        function playRandomMusic() {
+            console.log("Test");
+  var folderPath = 'uploads'; // Specify the folder path
+  var audioPlayer = document.getElementById('audioPlayer');
+  var audioSource = document.getElementById('audioSource');
+
+    function fetchMusicFiles() {
+    fetch('fetch_files.php')
+    .then(response => response.json())
+    .then(data => {
+      // Process the list of music files
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+  var files = ['JAI HO.mp3', 'KNAAN-Wavin-Flag.mp3', 'Shakira - Waka Waka (This Time for Africa) (The Official 2010 FIFA World Cup™ Song).mp3']; // List of music files in the folder
+
+  var randomIndex = Math.floor(Math.random() * files.length);
+  var randomFile = folderPath + '/' + files[randomIndex];
+
+  audioSource.src = randomFile;
+  audioPlayer.load();
+  audioPlayer.play();
+}
+    </script>
+</body>
+</html>

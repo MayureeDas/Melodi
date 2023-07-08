@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - My Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="container">
+       <div class="songlist">
+          <h1>Best Songs Collection - No Copyright Sounds</h1>
+              <div class="songItemContainer">
+                 <div class="songItems">
+                    <img alt="1">
+                    <span class="songName">Believer</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i  class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+               <div class="songItems">
+                  <img alt="1">
+                  <span class="songName">Believer</span>
+                  <span class="songlistplay"><span class="timestamp"> 03:24 <i ' class="fa-solid fa-circle-play" ></i> </span></span>
+               </div>
+              </div>
+       </div>      
+       <div class="songbanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" ProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="fa-solid fa-2x fa-step-backward"></i>
+            <i class="fa-solid fa-2x fa-circle-play" sterPlay"></i>
+            <i class="fa-solid fa-2x fa-step-forward"></i>
+        </div>
+        <div class="songInfo">
+           <img-image-0172.gif" width= "100px" alt="Songs"> Believer
+        </div>
+    </div>
+    <criptcript>
+    <scriptntawesome.com/696982b6d6.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+console.log("Welcome to Spotify");
+let songIndex = 0;
+let audioElement = new Audio('songs/just-relax-11157.mp3');
+let masterPlay = document.getElementById('masterPlay');
+let MyProgressBar = document.getElementById('MyProgressBar');
+let gif = document.getElementById('gif');
+let songItems = Array.from(documen.getElementsByClassName('songItem'));
+
+let songs = [
+      {songName: "Believer", filePath: "songs/Believer.mp3", coverPath: "covers/believer.webp"},
+      {songName: "Hall of Fame", filePath: "songs/Hall of Fame - The Script.mp3", coverPath: "covers/hall of fame.jpg"},
+      {songName: "Cheap Thrills", filePath: "songs/Cheap Thrills.mp3", coverPath: "covers/cheap thrills.jpg"},
+      {songName: "Señorita", filePath: "songs/Senorita.mp3", coverPath: "covers/Señorita.jpg"},
+      {songName: "Havana", filePath: "songs/Havana.mp3", coverPath: "covers/Havana.jpg"},
+      {songName: "Sorry", filePath: "songs/Sorry.mp3", coverPath: "covers/Sorry.jpg"},
+      {songName: "Let Me Love You", filePath: "songs/Let Me Love You.mp3", coverPath: "covers/let me love you.jpg"},
+      {songName: "Attention", filePath: "songs/Attention-Charlie-Puth.mp3", coverPath: "covers/Attention.jpg"},
+      {songName: "Girls Like You", filePath: "songs/Maroon_5 Girls Like You.mp3", coverPath: "covers/girls like you.jpg"},
+      {songName: "Faded", filePath: "songs/Faded.mp3", coverPath: "covers/Faded.jpg"},
+]
+
+songItems.forEach(element , i=>{
+  element.getElementsByTagname("img")[0].src = songs[i].coverPath;
+  element.getElementsByClassname("songName")[0].innerText = songs[i].songName;
+})
+//audioElement.play();
+
+//handle play/pause click
+masterPlay.addEventListener('click' , ()=>{
+        if(audioElement.paused || audioElement.currentTime<=0){
+          audioElement.play();
+          masterPlay.classList.remove('fa-circle-play');
+          masterPlay.classList.add('fa-circle-pause');
+          gif.style.opacity = 1;
+        }  
+        else
+        {
+        audioElement.pause();
+        masterPlay.classList.remove('fa-circle-pause');
+        masterPlay.classList.add('fa-circle-play');
+        gif.style.opacity = 0;
+        }
+})
+
+//listen to events
+audioElement.addEventListener('timeupdate' , ()=>{
+  //update seekbar
+   progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+   MyProgressBar.value = progress;
+})
+
+MyProgressBar.addEventListener('change' , ()=>{
+   audioElement.currentTime = MyProgressBar.value * audioElement.duration/100;
+
+})
+
+const makeAllPlays = ()=>{
+  Array.from(document.getElementsByClassName('songItemsPlay')).forEach((element)=>{
+    element.classList.add('fa-circle-play');
+  })
+} 
+
+Array.from(document.getElementsByClassName('songItemsPlay')).forEach((element)=>{
+     element.addEventListener('click' , (e)=>{
+       makeAllPlays();
+       index = parseInt(e.target.id);
+       e.target.classList.remove('fa-circle-play');
+       e.target.classList.add('fa-circle-pause');
+       audioElement.src = 'songs/${index+1}.mp3';
+       audioElement.currentTime = 0;
+       audioElement.play();
+       masterPlay.classList.remove('fa-circle-play');
+       masterPlay.classList.add('fa-circle-pause');
+     })
+
+
+})
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+body{
+    background-color:black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', 'sans-serif';
+}
+nav ul{
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    background-color: black;
+    color:rgb(1, 211, 57);
+    font-size: 1rem;
+}
+
+nav ul li{
+    padding: 0 15px;
+    
+}
+
+.brand img{
+    width: 50px;
+    padding: 0 7px;
+}
+
+.brand{
+    display : flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1rem;
+
+}
+
+.container{
+
+    min-height: 26vh;
+    background-color: black;
+    color: black;
+    font-family: 'Varela Round', 'sans-serif';
+    font-size: 0.9rem;
+    display:flex;
+    width : 70%;
+    margin: 10px auto;
+    border-radius: 21px;
+    padding : 34px;
+    background-image: url('background6.jpg');
+    background-size: 150rem;
+  
+}
+.bottom{
+    position: sticky;
+    height: 50px;
+    background-color:black;
+    color :rgb(1, 211, 57);
+    bottom : 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.icons{
+    margin-top: 70px;
+}
+.icons i{
+      cursor: pointer;
+      padding: 0px 20px;
+    
+}
+
+#MyProgressBar{
+    width: 80%;
+    cursor: pointer;
+   
+}
+
+.songItems{
+     height: 60px;
+     display: flex;
+     background-color: white;
+     width : 117%;
+     color:black;
+     margin : 65px 0px;
+     justify-content: space-between;
+     align-items: center;
+     border-radius: 40px;
+     font-size: 0.8rem;
+     font-weight: bolder;
+   
+  
+     
+}
+ 
+.songItems img{
+    width :40px;
+    margin : 0 23px;
+    border-radius: 20px;
+}
+
+.timestamp{
+    margin: 0px 15px;
+    cursor: pointer;   
+ 
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    padding-top: 0px;
+  
+}
+.songInfo img{
+   opacity: 0;
+   transition: opacity 0.8s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

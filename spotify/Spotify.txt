@@ -1,0 +1,227 @@
+let masterPlay1 = document.getElementById('masterPlay1');
+let masterPlay2 = document.getElementById('masterPlay2');
+let masterPlay3 = document.getElementById('masterPlay3');
+let masterPlay4 = document.getElementById('masterPlay4');
+let masterPlay5 = document.getElementById('masterPlay5');
+let masterPlay6 = document.getElementById('masterPlay6');
+let masterPlay7 = document.getElementById('masterPlay7');
+let masterPlay8 = document.getElementById('masterPlay8');
+let masterPlay9 = document.getElementById('masterPlay9');
+let masterPlay10 = document.getElementById('masterPlay10');
+
+
+
+masterPlay1.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay1.classList.remove('fa-circle-play');
+      masterPlay1.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay1.classList.remove('fa-circle-pause');
+    masterPlay1.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay2.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay2.classList.remove('fa-circle-play');
+      masterPlay2.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay2.classList.remove('fa-circle-pause');
+    masterPlay2.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay3.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay.classList.remove('fa-circle-play');
+      masterPlay3.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay3.classList.remove('fa-circle-pause');
+    masterPlay3.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay4.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay4.classList.remove('fa-circle-play');
+      masterPlay4.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay4.classList.remove('fa-circle-pause');
+    masterPlay4.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay5.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay5.classList.remove('fa-circle-play');
+      masterPlay5.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay5.classList.remove('fa-circle-pause');
+    masterPlay5.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay6.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay6.classList.remove('fa-circle-play');
+      masterPlay6.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay6.classList.remove('fa-circle-pause');
+    masterPlay6.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay7.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay7.classList.remove('fa-circle-play');
+      masterPlay7.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay7.classList.remove('fa-circle-pause');
+    masterPlay7.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay8.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay8.classList.remove('fa-circle-play');
+      masterPlay8.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay8.classList.remove('fa-circle-pause');
+    masterPlay8.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay9.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay9.classList.remove('fa-circle-play');
+      masterPlay9.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay9.classList.remove('fa-circle-pause');
+    masterPlay9.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+masterPlay10.addEventListener('click' , ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+      audioElement.play();
+      masterPlay10.classList.remove('fa-circle-play');
+      masterPlay10.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+    }  
+    else
+    {
+    audioElement.pause();
+    masterPlay10.classList.remove('fa-circle-pause');
+    masterPlay10.classList.add('fa-circle-play');
+    gif.style.opacity = 0;
+    }
+})
+
+
+
+
+
+<div class="songItems">
+                    <img src="believer.webp" alt="1">
+                    <span class="songName">Believer</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:24 <i id='1' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="hall of fame.jpg" alt="2">
+                    <span class="songName">Hall of Fame</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:22 <i id='2' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="cheap thrills.jpg" alt="3">
+                    <span class="songName">Cheap Thrills</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:31 <i id='3' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="Señorita.jpg" alt="4">
+                    <span class="songName">Señorita</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:10 <i id='4' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="Havana.jpg" alt="5">
+                    <span class="songName">Havana</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:37 <i id='5' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="Sorry.jpg" alt="6">
+                    <span class="songName">Sorry</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:20 <i id='6' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="let me love you.jpg" alt="7">
+                    <span class="songName">Let Me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:05 <i id='7' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="Attention.jpg" alt="8">
+                    <span class="songName">Attention</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:28 <i id='8' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="girls like you.jpg" alt="9">
+                    <span class="songName">Girls Like You</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:35 <i id='9' class="fa-solid songItemsPlay fa-circle-play" ></i> </span></span>
+                 </div>
+                 <div class="songItems">
+                    <img src="Faded.jpg" alt="10">
+                    <span class="songName">Faded</span>
+                    <span class="songlistplay"><span class="timestamp"> 03:32 <i id='10' class="fa-solid songItemsPlay fa-circle-play"  ></i> </span></span>
+                 </div>
