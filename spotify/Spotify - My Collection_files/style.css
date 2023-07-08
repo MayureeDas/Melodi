@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+body{
+    background-color:black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', 'sans-serif';
+}
+nav ul{
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    background-color: black;
+    color:rgb(1, 211, 57);
+    font-size: 1rem;
+}
+
+nav ul li{
+    padding: 0 15px;
+    
+}
+
+.brand img{
+    width: 50px;
+    padding: 0 7px;
+}
+
+.brand{
+    display : flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1rem;
+
+}
+
+.container{
+
+    min-height: 40vh;
+    background-color: black;
+    color: black;
+    font-family: 'Varela Round', 'sans-serif';
+    font-size: 1rem;
+    display:flex;
+    width : fit-content;
+    margin: 10px auto;
+    border-radius: 21px;
+    padding : 34px;
+    background-image: url('background6.jpg');
+    background-size: 150rem;
+  
+}
+.bottom{
+    position: sticky;
+    height: 50px;
+    background-color:black;
+    color :rgb(1, 211, 57);
+    bottom : 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.icons{
+    margin-top: 30px;
+}
+.icons i{
+      cursor: pointer;
+      padding: 0px 20px;
+    
+}
+
+#MyProgressBar{
+    width: 70%;
+    cursor: pointer;
+   
+}
+
+.songItems{
+     height: 60px;
+     display: flex;
+     background-color: white;
+     width : fit-content;
+     color:black;
+     margin : 60px 0px;
+     justify-content: space-between;
+     align-items: center;
+     border-radius: 40px;
+     font-size: 1rem;
+     font-weight: bolder;
+  
+     
+}
+
+.songItems img{
+    width :50vw;
+    margin : 0 23px;
+    border-radius: 20px;
+    
+
+}
+
+.timestamp{
+    margin: 0px 23px;
+    cursor: pointer;    
+}
+
+.songInfo{
+    position: absolute;
+    left: 15vw;
+    padding-top: 40px;
+  
+}
+.songInfo img{
+   opacity: 1;
+   transition: opacity is ease-in;
+}

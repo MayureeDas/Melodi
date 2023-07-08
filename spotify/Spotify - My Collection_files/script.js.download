@@ -1,0 +1,8 @@
+console.log("Welcome to Spotify");
+let songs = [
+
+
+    
+]
+let audioElement = new Audio('just-relax-11157.mp3');
+//audioElement.play();
